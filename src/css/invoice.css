@@ -1,0 +1,895 @@
+html, body {
+    height: 100%;
+}
+
+.invoice-container {
+
+}
+
+.list-block ul:after, .list-block ul:before {
+    background-color: transparent;
+}
+
+.up-button {
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.36rem;
+}
+
+.up-button.invoice-button {
+    height: 0.88rem;
+    line-height: 0.88rem;
+    font-size: 0.36rem;
+}
+.up-button:active{
+    background-color:#6cc20e !important; ;
+    color: #ffffff !important;
+}
+.invoice-empty-container {
+    position: absolute;
+    padding: 0 0.3rem;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.invoice-blank-image {
+    display: block;
+    width: 100%;
+    margin-top: 0.6rem;
+    margin-bottom: 0.46rem;
+}
+
+.invoice-blank-tip1 {
+    font-size: 0.32rem;
+    line-height: 0.6rem;
+    text-align: center;
+    color: #666;
+    margin: 0;
+}
+
+.invoice-blank-tip2 {
+    font-size: 0.24rem;
+    line-height: 0.6rem;
+    text-align: center;
+    color: #999;
+    margin: 0 0 0.3rem 0;
+}
+
+.list-block ul.invoice-item-default, .list-block ul.invoice-list {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    padding-left: 0.3rem;
+    margin-top: 0;
+}
+
+.list-block ul.invoice-list {
+    margin-bottom: 1.6rem;
+    border-top: 1px solid #d4d4d4;
+}
+
+.list-block ul.invoice-item-default {
+    margin-bottom: 0.3rem;
+}
+
+.invoice-item-name-default {
+    display: inline-block;
+    max-width: 4.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+}
+
+.invoice-item-name-c {
+    font-size: 0.32rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 0.57rem;
+}
+
+.invoice-default {
+    color: #FD3259;
+    margin-left: 0.3rem;
+    width: 0.9rem !important;
+}
+
+.invoice-item {
+    position: relative;
+    display: block;
+    padding: 0.15rem 0.3rem 0.15rem 0;
+    border-bottom: 1px solid #d4d4d4;
+    height: 1.16rem;
+}
+
+.invoice-item-default .invoice-item:last-child, .invoice-list .invoice-item:last-child {
+    border-bottom: none;
+}
+
+.invoice-item-name {
+    font-size: 0.32rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 0.57rem;
+}
+
+.invoice-item-name span {
+    float: left;
+    width: 5.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.invoice-item-code {
+    font-size: 0.24rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 0.35rem;
+}
+
+.list-block .swipeout-actions-right a.invoice-item-edit, .list-block .swipeout-actions-right a.invoice-item-delete {
+    font-size: 0.34rem;
+    text-align: center;
+    background-color: #c7c7cc;
+    color: #fff;
+    width: 1.34rem;
+    padding: 0 0;
+}
+
+.invoice-item-edit img {
+    width: 0.4rem;
+    display: block;
+    margin: 0.54rem auto;
+}
+
+.invoice-item-delete img {
+    width: 0.4rem;
+    display: block;
+    margin: 0.54rem auto;
+}
+
+.list-block .swipeout-actions-right a.invoice-item-delete {
+    background-color: #fc3e39;
+}
+
+.invoice-fix-button {
+    position: fixed;
+    width: 7.5rem;
+    height: 1.48rem;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: #fff;
+    border-top: 1px solid #d4d4d4;
+    padding: 0.3rem;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+/* 详情 */
+.invoice-detail {
+    position: relative;
+    padding: 0.15rem 0 0.15rem 0.3rem;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.invoice-detail-row.invoice-border {
+    border-top: 1px solid #d4d4d4;
+    padding-top: 0.2rem;
+    margin-top: 0.15rem;
+}
+
+.invoice-detail-row {
+    padding: 0.1rem 0;
+}
+
+.invoice-detail-label {
+    position: relative;
+    display: inline-block;
+    width: 1.3rem;
+    float: left;
+    font-size: 0.26rem;
+    line-height: 0.3rem;
+    color: #333;
+}
+
+.invoice-detail-value {
+    position: relative;
+    display: inline-block;
+    padding-left: 0.1rem;
+    width: 5.5rem;
+    float: left;
+    font-size: 0.26rem;
+    line-height: 0.3rem;
+    color: #666;
+    word-break: break-all;
+}
+
+.invoice-qrcode-tips {
+    position: relative;
+    margin: 0.3rem 0;
+    font-size: 0.26rem;
+    line-height: 0.1rem;
+    color: #666;
+    text-align: center;
+}
+
+.invoice-qrcode-area {
+    position: relative;
+    padding: 0.3rem;
+}
+
+.invoice-qrcode-area img, .invoice-qrcode-area canvas {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    border: 0.15rem solid #fff;
+}
+
+/* 从framework7移植 */
+.list-block .swipeout-actions-left, .list-block .swipeout-actions-right {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    right: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.swipeout .swipeout-content, .swipeout .swipeout-actions-right {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.scanCircle {
+    margin: 0 auto;
+    background-image: url(../img/scan.png);
+    width: 1.4rem;
+    height: 1.4rem;
+    background-size: cover;
+}
+
+.scanCircle2 {
+    margin: 0 auto;
+    background-image: url(../img/invscan.png);
+    width: 1.4rem;
+    height: 1.4rem;
+    background-size: cover;
+}
+
+.scanBtnBox {
+    background-color: #41aeda;
+    opacity: 0.88;
+}
+
+.scanBtnBox ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.scanBtnBox ul li {
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    margin: 0;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0.36rem;
+    color: #ffffff;
+    line-height: 0.7rem;
+}
+
+.scanBtnBox ul li span {
+    /*letter-spacing: -0.44px;*/
+}
+
+.swipeout-content {
+    right: 0;
+}
+
+.editShowBtnC {
+    float: right;
+    right: 0;
+}
+
+.showEditBtn {
+    float: right;
+    font-size: 0.32rem;
+    color: #45a4fc;
+}
+
+.invoiceHead {
+    position: relative;
+    display: block;
+    padding: 0.15rem 0.3rem 0.15rem 0;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.invoiceTab {
+    position: relative;
+    background-color: #fff;
+    /*border-bottom: 1px solid #d4d4d4;*/
+    padding-left: 0.3rem;
+    margin-top: 0;
+}
+
+.chooseForCreate {
+    width: 100%;
+    position: fixed;
+    bottom: 0.1rem;
+    z-index: 12;
+    display: none;
+}
+
+.altCreate {
+    background-color: #ffffff;
+    border-radius: 0.1rem;
+    text-align: center;
+    font-size: 0.34rem;
+    margin-left: 0.16rem;
+    margin-right: 0.16rem;
+}
+
+.cancelCreateBtn {
+    border-radius: 0.1rem;
+    background-color: #ffffff;
+    margin-left: 0.16rem;
+    margin-right: 0.16rem;
+    font-size: 0.34rem;
+    text-align: center;
+    margin-top: 0.1rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    color: #359cfc;
+}
+
+.mask {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.altCreate div {
+    height: 0.9rem;
+    line-height: 0.9rem;
+    color: #359cfc;
+}
+
+.handerRecordBtn {
+    border-bottom: 1px solid #d4d4d4;
+}
+
+#buttonAddInvoice2, #buttonAddInvoice {
+    background-color: #6cc20e;
+}
+
+#pageWrapper {
+    width: 7.5rem
+}
+
+.searchForFive {
+    position: absolute;
+    top: 0;
+    right: 0.3rem;
+    height: 0.84rem;
+    line-height: 0.84rem;
+    font-size: 0.32rem;
+    color: #4a90e2;
+}
+
+#inputInvoiceOrder {
+    padding-right: 2.016rem;
+}
+
+.searchResultField {
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    z-index: 11;
+}
+
+.searchTitleBar {
+    width: 100%;
+    height: 0.9rem;
+}
+
+.searchCancelBtn {
+    float: left;
+    border: none;
+    font-size: 0.28rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    color: #158cfb;
+    text-align: center;
+    margin-left: 0.3rem;
+}
+
+.searchBtn {
+    margin-left: 0.3rem;
+    float: left;
+    border: none;
+    font-size: 0.28rem;
+    height: 0.58rem;
+    line-height: 0.58rem;
+    text-align: center;
+    color: #999999;
+    vertical-align: middle;
+}
+
+.searchBtn.on {
+    color: #158cfb;
+}
+.searchResult span{
+    width: 6.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    word-break: break-all;
+    white-space: nowrap;
+}
+.searchTitle {
+    float: left;
+    font-size: 0.28rem;
+    height: 0.9rem;
+    width: 5.74rem;
+    line-height: 0.9rem;
+    text-align: center;
+    color: #333;
+}
+
+.searchInputField {
+    width: 100%;
+    height: 0.58rem;
+    background: rgba(228, 228, 228, 0.85);
+    padding: 0.16rem 0.3rem 0.16rem 0.3rem;
+}
+
+.searchInput {
+    float: left;
+    width: 4.84rem;
+    height: 0.6rem;
+    border: none;
+    -webkit-appearance: none;
+    font-size: 0.28rem;
+    border-radius: 0;
+}
+
+.searchInput:focus {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.searchIco {
+    background-color: #ffffff;
+    float: left;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-image: url("../img/search.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.1rem 0 0 0.1rem;
+}
+
+.closeIco {
+    background-color: #ffffff;
+    float: left;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 0.1rem 0.1rem 0;
+}
+
+.closeIco.on {
+    background-image: url("../img/close.png");
+}
+
+.searchResult {
+    width: 100%;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    font-size: 0.32rem;
+    padding-left: 0.3rem;
+    border-bottom: 1px solid #d4d4d4;
+    color: #666666;
+}
+
+#buttonSave {
+    color: #ffffff;
+    background-color: #6cc20e;
+}
+
+#buttonSave:disabled {
+    background-color: #bcbcbc !important;
+}
+
+.searchResult1 {
+    width: 100%;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    font-size: 0.32rem;
+    padding-left: 0.3rem;
+    border-bottom: 1px solid #d4d4d4;
+    color: #666666;
+}
+
+.searchResult1.default {
+    color: #999999;
+    padding: 0 !important;
+    border-bottom: none !important;
+    text-align: center !important;
+    font-size: 0.28rem !important;
+}
+
+.searchResult1.noresult {
+    display: none;
+    color: #999999;
+    height: 4.5rem !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+    text-align: center !important;
+    font-size: 0.28rem !important;
+}
+
+.invoiceHandle {
+    width: 7.5rem;
+    height: 100%;
+    /*background-color: #999999;*/
+}
+
+.invoiceHandle table {
+    width: 6.9rem;
+    margin-left: 0.3rem;
+    margin-height: 0.3rem;
+}
+
+.invoiceHandle table tr {
+    height: inherit;
+    padding-bottom: 0.1rem;
+}
+
+.tdInfo {
+    width: 4.82rem;
+    font-size: 0.26rem;
+    color: #666666;
+    line-height: 0.26rem;
+    word-wrap: break-word;
+    float: left;
+    display: inline-block;
+    position: relative;
+    height: auto;
+}
+
+.tdHead {
+    height: auto;
+    width: 1.64rem;
+    font-size: 0.26rem;
+    color: #333333;
+    line-height: 0.26rem;
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+.ticketText {
+    font-family: STHeitiSC-Light;
+    margin-top: 0.3rem;
+    width: 7.5rem;
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+}
+
+.handleinfo {
+    color: #999999;
+    font-size: 0.32rem;
+    width: 6.9rem;
+    margin-left: 0.3rem;
+    height: 0.94rem;
+    line-height: 0.94rem;
+}
+
+.defaultHandel {
+    background-color: #ffffff;
+}
+
+.defaultHandel table tr {
+    width: 100%;
+    border: none;
+    /*height: 0.56rem;*/
+    vertical-align: top;
+    display: block;
+    margin-bottom: 0.26rem;
+}
+
+.invoiceHandleBtn {
+    width: 100%;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.handleSubmit {
+    width: 6.9rem;
+    height: 0.88rem;
+    background: #6cc20e;
+    border-radius: 4px;
+    font-size: 0.36rem;
+    color: #ffffff;
+    text-align: center;
+    line-height: 0.88rem;
+}
+
+.changeHandle {
+    width: 6.88rem;
+    height: 0.86rem;
+    margin-top: 0.3rem;
+    border-radius: 4px;
+    font-size: 0.36rem;
+    color: #333333;
+    text-align: center;
+    line-height: 0.88rem;
+    border: 1px solid #000000;
+    background-color: inherit;
+}
+.changeHandle:active{
+    background-color: rgba(255,255,255,0) !important;
+    color: #000000 !important;
+}
+
+.searchHandleTitle {
+    height: 0.88rem;
+    width: 7.5rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.searchForHandle {
+    position: fixed;
+    bottom: 0;
+    width: 7.5rem;
+    display: none;
+    z-index: 11;
+}
+
+.searchTitleH {
+    float: left;
+    font-size: 0.28rem;
+    height: 0.9rem;
+    width: 5.74rem;
+    line-height: 0.9rem;
+    text-align: center;
+    color: #333;
+}
+
+.searchCancelHBtn {
+    float: left;
+    border: none;
+    font-size: 0.28rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    color: #158cfb;
+    text-align: center;
+    margin-left: 0.3rem;
+}
+
+.handlelist {
+    height: 4.45rem;
+    width: 100%;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.handelData {
+    width: 7.2rem;
+    height: 0.88rem;
+    border-bottom: 1px solid #d0d0d0;
+    padding-left: 0.3rem;
+}
+
+.handleTitle {
+    width: 5.42rem;
+    font-size: 0.32rem;
+    color: #666666;
+    line-height: 0.88rem;
+    float: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.handlebox {
+    width: 0.88rem;
+    height: 0.88rem;
+    float: right;
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.handlebox.on {
+    background-image: url("../img/check.png");
+}
+
+.tipsf span {
+    margin-left: 0.3rem;
+    font-size: 12px;
+    color: #666666 !important;
+    text-align: left;
+    line-height: 0.68rem;
+    display: inline-block;
+}
+.tipsword{
+    float: left;
+    width: 6.2rem;
+}
+.closeTips {
+    right: 0.3rem;
+    background-image: url("../img/closeTips.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 0.68rem;
+    height: 0.68rem;
+    float: right;
+}
+
+.tipsf {
+    padding: 0;
+    background-color: #f7efda;
+    width: 7.5rem;
+    height: 0.68rem;
+    display: none;
+}
+
+.tipsf.on {
+    display: block !important;
+}
+
+.editTips {
+    margin-left: 0.3rem;
+    font-size: 14px;
+    color: #666666;
+    letter-spacing: 0.15px;
+    line-height: 14px;
+}
+
+.commonUI-alertTop p {
+    word-wrap: break-word;
+    display: block;
+}
+
+.up-radio-button {
+    background-color: #ffffff;
+    border: 1px solid #cacaca;
+}
+
+.pageArea {
+    margin-top: 0.3rem;
+    width: 7.5rem;
+    padding-bottom: 0.3rem;
+    background-color: #ffffff;
+}
+
+h1 {
+    width: 6.9rem;
+    height: 0.84rem;
+    line-height: 0.84rem;
+    font-size: 0.28rem;
+    margin-left: 0.3rem;
+    font-weight: normal;
+    /*text-indent: 0.3rem;*/
+    display: block;
+    color: #333333;
+    border-bottom: 1px solid #cacaca;
+}
+
+h2 {
+    font-weight: normal;
+    margin-left: 0.3rem;
+    width: 6.9rem;
+    font-size: 0.26rem;
+    word-wrap: break-word;
+    /*text-indent: 0.3rem;*/
+    color: #666666;
+    line-height: 0.36rem;
+    display: block;
+}
+
+.invImg {
+    width: 3.25rem;
+    display: block;
+    margin-left: 0.3rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.3rem;
+    float: left;
+}
+
+.invImg.double {
+    margin-left: 0.4rem;
+}
+
+.helpBody {
+    background-color: #efeff4;
+    padding: 0;
+    margin: 0;
+    /*overflow-x: hidden;*/
+}
+
+.invoice-ticket-container {
+    position: fixed;
+    margin: 0;
+    background-color: #ffffff;
+    padding: 0;
+    width: 7.5rem;
+    height: 100%;
+}
+
+.ticket-img {
+    display: block;
+    margin-top: 1.8rem;
+    width: 7.5rem;
+}
+
+.ticket-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 7.5rem;
+    height: 0;
+}
+.tipsset{
+    margin-top: 0.4rem;
+}
+body{
+    overflow: hidden;
+}
+.invoiceTab.hide{
+    display: none;
+}
+.invoice-empty-container.hide{
+    display: none;
+}
+.invoice-list.hide{
+    display: none;
+}
+.invoice-default.hide{
+    display: none;
+}
+a:hover{ text-decoration:none; color:#333}
+a:link{ text-decoration:none; color:#333}
+a:visited{ text-decoration:none; color:#333}
+a:active{ text-decoration:none; color:#333}
+.invoice-detail-row.hide{
+    display: none;
+}

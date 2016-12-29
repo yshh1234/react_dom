@@ -1,0 +1,26 @@
+{
+  "name": "react_dom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --content-base ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "react-router": "*",
+    "zepto": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "http-server": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*"
+  }
+}
